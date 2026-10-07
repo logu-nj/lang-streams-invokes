@@ -1,0 +1,154 @@
+{
+  // ─────────────────────────────────────────────────────────────
+  //  VS Code Debug + Run Configurations
+  //  Project: streaming_lang (LangChain + LangGraph invocation demos)
+  // ─────────────────────────────────────────────────────────────
+  "version": "0.2.0",
+  "configurations": [
+
+    // ── Global env applied to EVERY config via this comment ────────
+    // PYTHONIOENCODING=utf-8  → fixes UnicodeEncodeError on Windows cp1252
+    // PYTHONUTF8=1            → Python 3.7+ UTF-8 mode (belt + suspenders)
+
+    // ── 1. Run the currently open file ───────────────────────────
+    {
+      "name": "▶ Run Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    // ── 2. Debug the currently open file (with breakpoints) ──────
+    {
+      "name": "🐛 Debug Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      }
+    },
+
+    // ── Individual file launchers ─────────────────────────────────
+
+    {
+      "name": "01 · invoke() — Sync Blocking",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/01_invoke.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "02 · ainvoke() — Async + Concurrent",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/02_ainvoke.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "03 · stream() — Sync Token Streaming",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/03_stream.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "04 · astream() — Async Token Streaming",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/04_astream.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "05 · astream_events() — Full Observability",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/05_astream_events.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "06 · LangGraph invoke() — Nodes + Branching",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/06_langgraph_invoke.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "07 · LangGraph stream() — All Stream Modes",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/07_langgraph_stream.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "08 · LangGraph astream_events() — Full Graph Events",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/08_langgraph_astream_events.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    },
+
+    {
+      "name": "09 · Comparison Summary — All Methods",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/09_comparison_summary.py",
+      "python": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1" }
+    }
+
+  ]
+}

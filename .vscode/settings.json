@@ -1,0 +1,48 @@
+{
+  // ─────────────────────────────────────────────────────────────
+  //  VS Code Workspace Settings
+  //  Project: streaming_lang
+  // ─────────────────────────────────────────────────────────────
+
+  // Python interpreter — points to the same Python used by pip
+  "python.defaultInterpreterPath": "C:\\Users\\talkt\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+
+  // Linting
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+
+  // Auto-format on save
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+
+  // Show inline type hints for variables and function returns
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+
+  // Terminal — use PowerShell in the integrated terminal
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // UTF-8 in the integrated terminal — fixes UnicodeEncodeError on Windows
+  // (cp1252 can't print emojis like ✅ 🐛 📦 without this)
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONUTF8": "1"
+  },
+
+  // Files to hide from the explorer (keep it clean)
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true
+  },
+
+  // Editor comfort settings
+  "editor.rulers": [88],           // black's default line length
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  "editor.renderWhitespace": "trailing"
+}

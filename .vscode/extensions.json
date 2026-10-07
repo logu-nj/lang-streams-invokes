@@ -1,0 +1,13 @@
+{
+  // ─────────────────────────────────────────────────────────────
+  //  Recommended Extensions for this project
+  //  VS Code will prompt to install these when opening the folder
+  // ─────────────────────────────────────────────────────────────
+  "recommendations": [
+    "ms-python.python",           // Python core extension
+    "ms-python.pylance",          // Fast type checking & IntelliSense
+    "ms-python.debugpy",          // Python debugger (required for launch.json)
+    "ms-python.black-formatter",  // Black code formatter
+    "ms-python.isort"             // Import sorter
+  ]
+}
